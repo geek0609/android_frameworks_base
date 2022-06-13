@@ -451,7 +451,7 @@ public class BatteryControllerImpl extends BroadcastReceiver implements BatteryC
         mEstimate = Estimate.getCachedEstimateIfAvailable(mContext);
         if (mEstimate == null) {
             mEstimate = mEstimates.getEstimate();
-            if (mEstimate != null) {
+            if (mEstimate != null && mEstimate.getEstimateMillis() > 0) {
                 Estimate.storeCachedEstimate(mContext, mEstimate);
             }
         }
