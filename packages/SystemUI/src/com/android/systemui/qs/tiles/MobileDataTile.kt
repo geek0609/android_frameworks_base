@@ -115,7 +115,9 @@ constructor(
                         DrawableIcon(signalDrawableInstance)
                     }
             label = tileState.label
+            secondaryLabel = tileState.secondaryLabel
             contentDescription = tileState.contentDescription
+            stateDescription = tileState.stateDescription
             expandedAccessibilityClassName = tileState.expandedAccessibilityClassName
         }
     }

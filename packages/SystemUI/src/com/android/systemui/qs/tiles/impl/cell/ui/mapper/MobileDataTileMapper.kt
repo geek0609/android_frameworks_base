@@ -61,7 +61,14 @@ constructor(
                 }
             }
 
-            contentDescription = "$label".toString()
+            secondaryLabel = data.secondaryLabel
+            stateDescription = secondaryLabel
+            contentDescription =
+                if (secondaryLabel.isNullOrEmpty()) {
+                    label.toString()
+                } else {
+                    "$label,$secondaryLabel"
+                }
             activationState =
                 if (data.isSimActive) {
                     if (data.isEnabled) {
